@@ -133,42 +133,55 @@
 </table>
 
 
-<h1 class="home-packages" style="color:black;">Nos Promos</h1>
+<h1 class="home-packages" style="color: black; text-align:center; padding: 20px;  ">Témoignages</h1>
+
+ <!-- Témoignage 1 -->
+            <div class="testimonial-item">
+                <div class="avatar-container">
+                    <!-- Remplacez l'URL src par votre propre image -->
+                    <img src="https://placeholder.com" alt="Avatar" class="avatar">
+                </div>
+                <div class="testimonial-content">
+                    <p class="quote">"Idon unvenerabales cepteremum, vilit nad fanum an influentitunsi qodut evani phis qos aci neit experatus."</p>
+                    <span class="author">Aria</span>
+                </div>
+            </div>
+
+            <!-- Témoignage 2 -->
+            <div class="testimonial-item">
+                <div class="avatar-container">
+                    <!-- Remplacez l'URL src par votre propre image -->
+                    <img src="https://placeholder.com" alt="Avatar" class="avatar">
+                </div>
+                <div class="testimonial-content">
+                    <p class="quote">"Idon unvenerabales cepteremum, vilit nad fanum an influentitunsi qodut evani phis qos aci neit experatus."</p>
+                    <span class="author">Aria</span>
+                </div>
+            </div>
+            <!-- Témoignage 3 -->
+            <div class="testimonial-item">
+                <div class="avatar-container">
+                    <!-- Remplacez l'URL src par votre propre image -->
+                    <img src="https://placeholder.com" alt="Avatar" class="avatar">
+                </div>
+                <div class="testimonial-content">
+                    <p class="quote">"Idon unvenerabales cepteremum, vilit nad fanum an influentitunsi qodut evani phis qos aci neit experatus."</p>
+                    <span class="author">Aria</span>
+                </div>
+            </div>
 
 
-        <div class="box-container">
-            <div class="box">
-                <div class="image">
-                    <img src="turquie voyage.jpg" alt="">
-                </div>
-                <div class="content">
-                    <h3>Turquie</h3>
-                    <p>une expérience unique où nature, luxe et détente se rencontrent. Cet établissement allie charme rustique et services haut de gamme pour satisfaire les voyageurs les plus exigeants.</p>
-                    <a href="#" class="btn">reservez maintenant</a>
-                </div>
-           </div>
-            
-            <div class="box">
-                <div class="image">
-                    <img src="asie voyage.jfif" alt="">
-                </div>
-                <div class="content">
-                    <h3>Asie</h3>
-                    <p>une expérience unique où nature, luxe et détente se rencontrent. Cet établissement allie charme rustique et services haut de gamme pour satisfaire les voyageurs les plus exigeants.</p>
-                    <a href="#" class="btn">reservez maintenant</a>
-                </div>
-            
-        </div>
 
-              <div class="box">
-                <div class="image">
-                    <img src="omra image.jpeg" alt="">
-                </div>
-                <div class="content">
-                    <h3>Omra </h3>
-                    <p style="font-family:Arial, Helvetica, sans-serif;"> Votre agence propose un voyage omra au arbia saudia avec Meilleurs conditions .Profitez d’un hébergement confortable, de transferts organisés et d’un accompagnement professionnel et attentionné.</p>
-                    <a href="#" class="btn">reservez maintenant</a>
-                </div>
+
+
+
+
+
+
+
+
+       
+                 
 </section>
 
 <style>
@@ -200,6 +213,101 @@
   tr:hover {
     background-color: #ddd;      /* Changement de couleur au survol */
   }
+
+ /* Conteneur principal */
+        .testimonials-section {
+            max-width: 1100px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        /* Titre principal */
+        .testimonials-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 50px;
+            color: #1a1a1a;
+        }
+
+        /* Grille des témoignages */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 colonnes de base */
+            gap: 40px 30px;
+        }
+         /* Alignement spécifique pour les deux derniers blocs en bas */
+        .testimonial-item:nth-child(4) {
+            grid-column: 1 / 2; /* Force le début sur la première colonne */
+            margin-left: auto;
+            max-width: 320px;
+        }
+        
+        .testimonial-item:nth-child(5) {
+            grid-column: 3 / 4; /* Force la fin sur la dernière colonne */
+            margin-right: auto;
+            max-width: 320px;
+        }
+
+        /* Structure d'un bloc de témoignage */
+        .testimonial-item {
+            display: flex;
+            align-items: flex-start;
+            text-align: left;
+            gap: 15px;
+        }
+         /* Conteneur de l'image (avatar) */
+        .avatar-container {
+            flex-shrink: 0;
+        }
+
+        .avatar {
+            width: 75px;
+            height: 75px;
+            border-radius: 50%;
+            object-fit: cover;
+            background-color: #e2e8f0; /* Fond gris clair de secours */
+        }
+
+        /* Conteneur du texte */
+        .testimonial-content {
+            display: flex;
+            flex-direction: column;
+        }
+         /* Texte du témoignage */
+        .quote {
+            font-style: italic;
+            font-size: 0.95rem;
+            line-height: 1.4;
+            margin: 0 0 8px 0;
+            color: #4a4a4a;
+        }
+
+        /* Nom de l'auteur */
+        .author {
+            font-weight: bold;
+            font-size: 0.9rem;
+            color: #1a1a1a;
+        }
+
+        /* Responsive : passage sur 1 seule colonne pour les téléphones */
+        @media (max-width: 768px) {
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+             .testimonial-item:nth-child(4),
+            .testimonial-item:nth-child(5) {
+                grid-column: auto;
+                margin: 0;
+                max-width: 100%;
+            }
+            .testimonial-item {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+        }
+  
 </style>
 </head>
 <body>
