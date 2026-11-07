@@ -1,0 +1,63 @@
+.vision-section {
+  background-color: #53525d; /* Votre couleur de fond actuelle */
+  padding: 80px 20px; /* Donne de l'espace en haut et en bas */
+  color: #ffffff;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 50px; /* Espace entre l'image et le texte */
+}
+
+/* Rapproche le comportement de l'image de votre maquette */
+.vision-img {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 12px;
+  display: block;
+}
+
+.vision-content {
+  flex: 1;
+}
+
+.vision-content h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+.vision-content p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  color: #e0e0e0; /* Blanc légèrement cassé pour un meilleur confort visuel */
+}
+
+/* Bouton harmonisé et accessible */
+.btn-vision {
+  display: inline-block;
+  background-color: #d99343; /* Couleur ajustée pour le contraste */
+  color: #1a1a1a; /* Texte sombre pour l'accessibilité */
+  padding: 12px 30px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+.btn-vision:hover {
+  background-color: #c58133;
+}
+
+/* Version Mobile */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+}

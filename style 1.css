@@ -1,0 +1,651 @@
+:root{
+    --main-color:#d79549;
+    --black:#222;
+    --white:#fff;
+    --light-black:#777;
+    --light-white:#fff9;
+    --dark-bg:rgba(0,0,0,.7);
+    --light-bg:#eee;
+    --border:.1rem solid var(--black);
+    --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
+    --text-shadow:0 1.5rem 3rem rgba(0,0,0,.3);
+    --imagestext: rgb(160, 170, 18);
+    --text: rgb(216, 25, 11);
+    --color: #03516e;
+ }
+
+*{
+    font-family: 'Ariel', sans-serif;
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    border: none;
+    text-decoration: none;
+    outline: none;
+    
+   
+}
+html{
+    font-size: 65%;
+    overflow-x: hidden;
+}
+
+section {
+    padding: 5rem 10%;
+}
+.btn {
+    display: inline-block;
+    font-size: 1.7rem;
+    padding: 1rem 3rem;
+    background: var(--main-color);
+    color: var(--white);
+    cursor: pointer;
+}
+.btn:hover{
+    background: var(--black);
+}
+.heading-title {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 6rem;
+    text-transform: uppercase;
+    color: var(--black);
+}
+
+/* Mise en forme du header */
+.header{
+    position: sticky;
+    top: 0; left: 0; right: 0;
+    z-index: 1000 !important;
+    /*mise en forme du bos-shadow*/
+    background: var(--white);
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     padding-top: 2rem;
+     padding-bottom: 2rem;
+     box-shadow: var(--box-shadow);
+}
+.header .logo {
+    font-size: 2.5rem;
+    color:var(--main-color);
+   font-weight: bold;
+}
+.header .navbar {
+    z-index: 1000;
+   
+
+}
+.container-fluid{
+    background-color: white;
+}
+.header .navbar a{
+    font-size: 2rem;
+    margin-left: 2rem;
+    color:var(--main-color);
+      transition: all 0.3s ease;
+        font-weight: bold;
+        text-decoration: none;
+}
+.header .navbar a:hover {
+    color:var(--main-color);
+     font-size: 2.5rem;
+       transform: scale(1.15); 
+}
+#menu-btn{
+  font-size: 2.5rem;
+  cursor: pointer;
+  color: var(--black);
+  display: none;
+}
+
+/*section de la banniere*/
+.home{
+    padding: 0;
+}
+.home .slide {
+    text-align: center;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover !important;
+    background-position: center !important;
+    min-height: 60rem;
+}
+.home .slide .content{
+    width: 85rem;
+    display: none;
+}
+.home .swiper-slide-active .content{
+    display: inline-block;
+
+}
+
+@keyframes fade {
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+
+.home .slide .content span{
+    display: block;
+    font-size: 3rem;
+    color: var(--white);
+    padding-bottom: 1rem;
+    animation: fade .3s linear backwards .2s;
+}
+.home .slide .content h3{
+    font-size: 6vw;
+    color: var(--white);
+    text-transform: uppercase;
+    line-height: 1;
+    text-shadow: var(--text-shadow);
+    padding: 1rem 0;
+    animation: fade .3s linear backwards .4s;
+}
+.home .slide .content .btn {
+    animation: fade .3s linear backwards .6s;
+    background-color:  #a64b2a;
+     padding : 8px 40px;  
+      border-radius: 4px;
+   
+}
+
+.swiper-button-next,
+.swiper-button-prev{
+   height: 7rem;
+   width: 7rem;
+   background: var(--white);
+   color: var(--black);
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover{
+   background: var(--main-color);
+   color: var(--white);
+}
+.swiper-button-next:after,
+.swiper-button-prev:after{
+ font-size: 2rem;
+}
+
+.services .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(16rem,1fr));
+    gap: 1.5rem;
+}
+.services .box-container .box {
+    text-align: center;
+    background: var(--main-color);
+    padding: 3rem 2rem;
+    cursor: pointer;
+}
+.services .box-container .box:hover{
+    background: var(--black);
+}
+.services .box-container .box img{
+    height: 7rem;
+}
+.services .box-container .box h3{
+    font-size: 1.7rem;
+    color: var(--white);
+    padding-top: 1rem;
+}
+/* home about */
+.home-about{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+     background-color:#5f5d67;/*couleur du container*/
+}
+.home .box-container{
+    background-color:var(--light-bg);/*couleur du container*/
+    width: 100%;
+}
+.home-about .image{
+    flex: 1 1 41rem;
+    
+}
+.home-about .image img{
+    width: 90%;
+    margin: 20px;
+}
+.home-about .content{
+    flex:  1 1 41rem;
+    padding: 3rem;
+   
+}
+.home-about .content .btn {
+    animation: fade .3s linear backwards .6s;
+    background-color:  #a64b2a;
+     padding : 8px 40px;  
+      border-radius: 4px;
+}
+
+.home-about .content h3{
+    font-size: 3rem;
+    color: var(--black);
+}
+.home-about .content h1{
+    font-size: 3rem;
+    color: var(--white);
+}
+.home-about .content p{
+    font-size: 1.5rem;
+    padding: 1rem 0;
+    line-height: 2;
+    color: var(--white)  ;
+    font-weight: normal;
+}
+
+/*class home package*/
+.home-packages{
+    background: var(--white);
+}
+
+.home-packages .box-container{
+    display: grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap: 3rem;
+}
+
+.home-packages .box-container .box {
+  
+    box-shadow: var(--box-shadow);
+    background: var var(--white);
+}
+.home-packages .box-container .box .image{
+    height: 20rem;
+    overflow: hidden;
+}
+.home-packages .box-container .box:hover .image img{
+    transform: scale(1.1);
+}
+.home-packages .box-container .box .image img{
+    height: 100%; width: 100%;
+    object-fit: cover;
+    transition: .2s linear;
+}
+.home-packages .box-container .box .content{
+    padding: 2rem;
+    text-align: center;
+}
+.home-packages .box-container .box .content h3{
+    font-size: 2.5rem;
+    color: var(--black);
+}
+.home-packages .box-container .box .content p{
+    font-size: 1.5rem;
+    color: var(--light-black);
+    line-height: 2;
+    padding: 1rem 0;
+}
+.home-packages .load-more{
+    text-align: center;
+    margin-top: 2rem;
+}
+.home-packages .box-container .box .content .btn{
+    animation: fade .3s linear backwards .6s;
+    background-color:  #a64b2a;
+     padding : 8px 40px;  
+      border-radius: 6px;  
+   
+}
+/*class home a propos*/
+.services{
+    background-color: #5f5d67;
+}
+.services img{
+    color: #a64b2a;
+   
+}
+
+/*class home offer*/
+.home-offer{
+    text-align: center;
+   
+
+}
+.home-offer .content{
+    max-width: 70rem;
+    margin: 0 auto;
+}
+.home-offer .content h3{
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    color: var(--black);
+}
+.home-offer .content p{
+    font-size: 1.5rem;
+    color: var(--light-black);
+    line-height: 2;
+    padding: 1rem 0;
+    text-align: center;
+}
+.home-offer .content a{
+   
+    color:white;
+    
+}
+.home-offer .content .btn{
+  animation: fade .3s linear backwards .6s;
+    background-color:  #a64b2a;
+     padding : 8px 40px;  
+      border-radius: 6px;  
+   
+    
+}
+
+/*footer*/
+.footer{
+    background: url(footer-bg.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.footer .box-container{
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(25rem,1fr));
+   
+      
+}
+.footer .box-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem; /* ↓ espace réduit */
+   
+}
+.footer .box-container .box h3{
+    color: var(--white);
+    font-size: 1.5 rem;
+    display: block;
+}
+.footer .box-container .box a{
+    color: var(--light-white);
+    font-size: 1.5rem;
+    display: block;
+}
+.footer .box-container .box a i{
+    color:var(--main-color);
+    padding-right: .5rem;
+    transition: .2s linear;
+}
+.footer .box-container .box a:hover i{
+    padding-right: 2rem;
+}
+.footer .home-right{
+    text-align: center;
+    padding-top: 3rem;
+    margin-top: 3rem;
+    border-top: .1rem solid var(--light-white);
+    font-size: 2rem;
+    color: var(--white);
+}
+.footer .home-right span {
+    color: var(--main-color);
+}
+/* nav bar menu*/
+
+@media (max-width:1200px){
+    section{
+        padding: 3rem 5%;
+    }
+}
+@media (max-width: 991px){
+    html{
+        font-size: 55%;
+    }
+    section {
+        padding: 3rem 2rem;
+    }
+}
+
+@media (max-width: 450px){
+    html{
+        font-size: 50%;
+    }
+    .heading-title{
+        font-size: 4 rem;
+    }
+}
+/* index 1*/
+
+ 
+ 
+
+
+ .camping-propos{
+  background-color: #032f0da5;
+  color:black;
+    font-size: 6rem;
+ }
+ .services-propos{
+   
+      background-color: #5f5d67;
+       font-size: 3rem;
+    color: var(--white);
+ }
+
+
+ /* --- Styles de la Section Principale --- */
+.destination-propos {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #d79549;
+}
+
+/* Titre principal "TOP DESTINATIONS" */
+.destination-propos .heading-title {
+    font-size: 48px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+/* --- Grille des Destinations (3 colonnes) --- */
+.destination-propos .box-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Crée 3 colonnes égales */
+    gap: 30px; /* Espace entre les boîtes */
+}
+
+/* Style de chaque boîte destination */
+.destination-propos .box {
+    background-color: #ffffff;
+    border-radius: 15px; /* Arrondit les bords de la boîte blanche */
+    overflow: hidden; /* Coupe l'image si elle dépasse des bords arrondis */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* Légère ombre sous la boîte */
+    padding-bottom: 15px; /* Espace sous le texte de description */
+}
+
+/* --- Gestion des Images et Textes --- */
+.destination-propos .box .image {
+    position: relative; /* Indispensable pour positionner les textes absolus à l'intérieur */
+    width: 100%;
+    height: 220px; /* Fixe la hauteur pour uniformiser toutes les images */
+    overflow: hidden;
+}
+
+.destination-propos .box .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Adapte l'image sans la déformer */
+}
+
+/* Style par défaut pour les div "texte" */
+.destination-propos .box .image .texte {
+    position: absolute;
+}
+
+/* Cibler spécifiquement le nom de la destination (ex: LYON, TURQUIE) */
+/* Comme il n'a pas de style inline dans votre HTML, on le place en bas, au centre */
+.destination-propos .box .image .texte:not([style*="color: red"]) {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.5)); /* Dégradé pour lisibilité */
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Option alternative : Si vous préférez que le titre de la destination soit SOUS l'image 
+   comme sur votre maquette d'origine, retirez le bloc ci-dessus et utilisez celui-ci :
+   
+.destination-propos .box .image .texte:not([style*="color: red"]) {
+    position: relative;
+    color: #000000;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 15px;
+    text-transform: uppercase;
+}
+*/
+
+/* Cibler le texte "Promo 50%" (qui contient le style inline color: red) */
+.destination-propos .box .image .texte[style*="color: red"] {
+    background-color: rgba(255, 255, 255, 0.9); /* Fond blanc semi-transparent */
+    padding: 5px 12px;
+    border-radius: 0 0 10px 0; /* Arrondit uniquement le coin inférieur droit */
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* Cache les contenus vides inutilisés dans votre structure HTML */
+.destination-propos .box .content {
+    display: none; 
+}
+
+/* --- Adaptabilité Mobile & Tablette (Responsive) --- */
+@media (max-width: 991px) {
+    .destination-propos .box-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 colonnes sur tablette */
+    }
+}
+
+@media (max-width: 768px) {
+    .destination-propos .box-container {
+        grid-template-columns: 1fr; /* 1 seule colonne sur mobile */
+        margin: 10px !important;
+    }
+    
+    .destination-propos .heading-title {
+        font-size: 32px;
+    }
+}
+
+
+/* index 3*/
+
+html, body, h1, form, fieldset, legend, ol, li {
+  margin: 0;
+  padding: 0;
+ 
+ 
+}
+body {
+  background:#ffffff;
+  color: #111111;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  padding: 20px;
+}
+form#paiement {
+  background:white;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  padding: 20px;
+  width: 400px;
+  margin:60px;
+
+}
+
+form#paiement fieldset {
+  border: none;
+  margin-bottom: 10px;
+  color:var(--main-color);
+  text-align:'times new roman', sans-serif;
+  font-size :medium, gras;
+}
+form#paiement fieldset:last-of-type {
+  margin-bottom: 0;
+}
+form#paiement ol li {
+  background: #b9cf6a;
+  background: rgba(255,255,255,.3);
+  border-color: #e3ebc3;
+  border-color: rgba(255,255,255,.6);
+  border-style: solid;
+  border-width: 2px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  line-height: 30px;
+  list-style: none;
+  padding: 5px 10px;
+  margin-bottom: 2px;
+}
+form#paiement ol ol li {
+  background: none;
+  border: none;
+  float: left;
+}
+
+footer {
+    width: 400px;
+    margin: 0 auto; /* centre horizontalement */
+    text-align: center;
+}
+fieldset{
+      width: 320px;
+    padding: 10px;
+    border-radius: 10px;
+}
+p {
+    font-size: 17px;
+    line-height: 1.6;
+    text-align: justify;
+}
+.row {
+    margin-bottom: 60px;
+}
+.container {
+    margin: 40px 0; /* haut et bas */
+}
+img {
+    max-width: 300%;
+     width: 100%;
+    border-radius: 10px;
+    position: relative;}
+  img {
+    float: right;
+   
+}
+
+.container {
+    background: white;
+    padding: 40px;
+      border-radius: 0px ;
+      max-width: 100%;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);}
+    .table{
+        margin :40px;
+        padding-right: 10px;
+        padding-left: 10px;
+         border-collapse: collapse;
+        
+    }
+    
+.row p{
+    text-align: justify;
+    padding-bottom: 5px;
+    margin-top: 50px;
+    
+}
+
