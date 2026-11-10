@@ -49,4 +49,135 @@
   </nav>
 
   <div class="fas fa-bars" id="menu-btn"></div>
+  </section>
+<section class="contact-section">
+
+    <div class="contact-container">
+
+        <div class="contact-info">
+            <h2>Contactez-nous</h2>
+            <p>Nous sommes à votre écoute. N'hésitez pas à nous contacter pour toute question.</p>
+
+            <div class="info-item">
+                <strong>📍 Adresse</strong>
+                <p>Tunis, Tunisie</p>
+            </div>
+
+            <div class="info-item">
+                <strong>📞 Téléphone</strong>
+                <p>+216 00 000 000</p>
+            </div>
+
+            <div class="info-item">
+                <strong>✉️ Email</strong>
+                <p>contact@example.com</p>
+            </div>
+        </div>
+
+        <div class="contact-form">
+            <h2>Envoyez-nous un message</h2>
+
+            <form>
+                <input type="text" placeholder="Votre nom" required>
+
+                <input type="email" placeholder="Votre email" required>
+
+                <input type="text" placeholder="Sujet" required>
+
+                <textarea placeholder="Votre message..." rows="5" required></textarea>
+
+                <button type="submit">Envoyer le message</button>
+            </form>
+        </div>
+
+    </div>
+
 </section>
+
+
+<style>
+
+  
+.contact-section {
+    padding: 60px 20px;
+    background-color: #f5f5f5;
+}
+
+.contact-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 40px;
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.contact-info h2,
+.contact-form h2 {
+    color: #d28f2b;
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    color: #555;
+    line-height: 1.6;
+}
+
+.info-item {
+    margin-top: 25px;
+}
+
+.info-item strong {
+    color: #333;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #ddd;
+    border-radius: 7px;
+    font-size: 15px;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #d28f2b;
+}
+
+.contact-form button {
+    padding: 14px;
+    background-color: #d28f2b;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #ad701b;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .contact-container {
+        grid-template-columns: 1fr;
+        padding: 25px;
+    }
+}
+
+</style>

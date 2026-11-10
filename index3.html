@@ -59,7 +59,7 @@
 <table>
   <thead>
     <tr>
-      <th>Mois du départ</th>
+      <th >Mois du départ</th>
       <th>Mois d'arrivée</th>
       <th>Pays</th>
       <th>type du séjour</th>
@@ -134,7 +134,7 @@
 
 
 <h1 class="home-packages" style="color: black; text-align:center; padding: 20px;  ">Témoignages</h1>
-
+     <div class="testimonial-grid">
  <!-- Témoignage 1 -->
             <div class="testimonial-item">
                 <div class="avatar-container">
@@ -143,7 +143,7 @@
                 </div>
                 <div class="testimonial-content">
                     <p class="quote">"Idon unvenerabales cepteremum, vilit nad fanum an influentitunsi qodut evani phis qos aci neit experatus."</p>
-                    <span class="author">Aria</span>
+                    <span class="author">Ali </span>
                 </div>
             </div>
 
@@ -155,7 +155,7 @@
                 </div>
                 <div class="testimonial-content">
                     <p class="quote">"Idon unvenerabales cepteremum, vilit nad fanum an influentitunsi qodut evani phis qos aci neit experatus."</p>
-                    <span class="author">Aria</span>
+                    <span class="author">Salma</span>
                 </div>
             </div>
             <!-- Témoignage 3 -->
@@ -166,8 +166,9 @@
                 </div>
                 <div class="testimonial-content">
                     <p class="quote">"Idon unvenerabales cepteremum, vilit nad fanum an influentitunsi qodut evani phis qos aci neit experatus."</p>
-                    <span class="author">Aria</span>
+                    <span class="author">Ahmed</span>
                 </div>
+            </div>
             </div>
 
 
@@ -203,7 +204,7 @@
 
   th {
     background-color:gray;  /* Couleur de fond des en-têtes */
-    color: white;               /* Texte en blanc */
+    color: #d28f2b;               /* Texte en blanc */
   }
 
   tr:nth-child(even) {
@@ -215,99 +216,92 @@
   }
 
  /* Conteneur principal */
-        .testimonials-section {
-            max-width: 1100px;
-            margin: 0 auto;
-            text-align: center;
-        }
+       
+   
+      
+/* Grille des témoignages */
+.testimonial-grid {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
 
-        /* Titre principal */
-        .testimonials-title {
-            font-size: 2.5rem;
-            font-weight: bold;
-            margin-bottom: 50px;
-            color: #1a1a1a;
-        }
+/* Chaque témoignage */
+.testimonial-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 25px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    text-align: left;
+    transition: transform 0.3s ease;
+}
 
-        /* Grille des témoignages */
-        .testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr); /* 3 colonnes de base */
-            gap: 40px 30px;
-        }
-         /* Alignement spécifique pour les deux derniers blocs en bas */
-        .testimonial-item:nth-child(4) {
-            grid-column: 1 / 2; /* Force le début sur la première colonne */
-            margin-left: auto;
-            max-width: 320px;
-        }
-        
-        .testimonial-item:nth-child(5) {
-            grid-column: 3 / 4; /* Force la fin sur la dernière colonne */
-            margin-right: auto;
-            max-width: 320px;
-        }
+.testimonial-item:hover {
+    transform: translateY(-5px);
+}
 
-        /* Structure d'un bloc de témoignage */
-        .testimonial-item {
-            display: flex;
-            align-items: flex-start;
-            text-align: left;
-            gap: 15px;
-        }
-         /* Conteneur de l'image (avatar) */
-        .avatar-container {
-            flex-shrink: 0;
-        }
+/* Avatar */
+.avatar-container {
+    flex-shrink: 0;
+}
 
-        .avatar {
-            width: 75px;
-            height: 75px;
-            border-radius: 50%;
-            object-fit: cover;
-            background-color: #e2e8f0; /* Fond gris clair de secours */
-        }
+.avatar {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: #e2e8f0;
+}
 
-        /* Conteneur du texte */
-        .testimonial-content {
-            display: flex;
-            flex-direction: column;
-        }
-         /* Texte du témoignage */
-        .quote {
-            font-style: italic;
-            font-size: 0.95rem;
-            line-height: 1.4;
-            margin: 0 0 8px 0;
-            color: #4a4a4a;
-        }
+/* Contenu */
+.testimonial-content {
+    display: flex;
+    flex-direction: column;
+}
 
-        /* Nom de l'auteur */
-        .author {
-            font-weight: bold;
-            font-size: 0.9rem;
-            color: #1a1a1a;
-        }
+/* Citation */
+.quote {
+    font-style: italic;
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0 0 12px;
+    color: #555;
+}
 
-        /* Responsive : passage sur 1 seule colonne pour les téléphones */
-        @media (max-width: 768px) {
-            .testimonials-grid {
-                grid-template-columns: 1fr;
-                gap: 30px;
-            }
-             .testimonial-item:nth-child(4),
-            .testimonial-item:nth-child(5) {
-                grid-column: auto;
-                margin: 0;
-                max-width: 100%;
-            }
-            .testimonial-item {
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-            }
-        }
-  
+/* Auteur */
+.author {
+    font-weight: bold;
+    font-size: 15px;
+    color: #1a1a1a;
+}
+
+/* Tablette */
+@media (max-width: 900px) {
+    .testimonial-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Téléphone */
+@media (max-width: 600px) {
+    .testimonial-grid {
+        grid-template-columns: 1fr;
+        padding: 15px;
+    }
+
+    .testimonial-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
 </style>
 </head>
 <body>
